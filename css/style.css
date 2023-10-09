@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#e66465, #9198e5);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.container-form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label-vogais {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.input-vogais {
+  width: 400px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  outline: none;
+}
+
+.input-vogais:focus {
+  border: 3px solid lightblue;
+}
+
+.display {
+  width: 400px;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #fff;
+}
