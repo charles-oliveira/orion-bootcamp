@@ -1,20 +1,20 @@
-import { lista } from './personalidades'
+import { listaDePersonalidades } from './personalidades'
 
 // a) Retorna a bio do id passado
-function getBioByIdImperative(id: number): string {
-  for (let i = 0; i < lista.length; i++) {
-    if (lista[i]['id'] === id) {
-      return lista[i]['bio']
+function obterBiografiaPorIdImperativo(id: number): string {
+  for (let i = 0; i < listaDePersonalidades.length; i++) {
+    if (listaDePersonalidades[i]['id'] === id) {
+      return listaDePersonalidades[i]['bio']
     }
   }
   return 'ID não encontrado'
 }
 
 // b) Retorna o name do id passado
-function getNameByIdImperative(id: number): string {
-  for (let i = 0; i < lista.length; i++) {
-    if (lista[i]['id'] === id) {
-      return lista[i]['name']
+function obterNomePorIdImperativo(id: number): string {
+  for (let i = 0; i < listaDePersonalidades.length; i++) {
+    if (listaDePersonalidades[i]['id'] === id) {
+      return listaDePersonalidades[i]['name']
     }
   }
   return 'ID não encontrado'
@@ -22,28 +22,28 @@ function getNameByIdImperative(id: number): string {
 
 // c) Crie uma função que apague um item a partir de um id passado
 
-function deleteItemByIdImperative(id: number): void {
-  for (let i = 0; i < lista.length; i++) {
-    if (lista[i]['id'] === id) {
-      lista.splice(i, 1)
+function excluirItemPorIdImperativo(id: number): void {
+  for (let i = 0; i < listaDePersonalidades.length; i++) {
+    if (listaDePersonalidades[i]['id'] === id) {
+      listaDePersonalidades.splice(i, 1)
       break
     }
   }
 }
 
 // d) Altera a bio ou o name a partir de um id passado
-function updateItemByIdImperative(
+function atualizarItemPorIdImperativo(
   id: number,
   name?: string,
   bio?: string
 ): void {
-  for (let i = 0; i < lista.length; i++) {
-    if (lista[i]['id'] === id) {
+  for (let i = 0; i < listaDePersonalidades.length; i++) {
+    if (listaDePersonalidades[i]['id'] === id) {
       if (name !== undefined) {
-        lista[i]['name'] = name
+        listaDePersonalidades[i]['name'] = name
       }
       if (bio !== undefined) {
-        lista[i]['bio'] = bio
+        listaDePersonalidades[i]['bio'] = bio
       }
       break
     }
@@ -51,8 +51,8 @@ function updateItemByIdImperative(
 }
 
 export {
-  getBioByIdImperative,
-  getNameByIdImperative,
-  deleteItemByIdImperative,
-  updateItemByIdImperative
+  obterBiografiaPorIdImperativo,
+  obterNomePorIdImperativo,
+  excluirItemPorIdImperativo,
+  atualizarItemPorIdImperativo
 }

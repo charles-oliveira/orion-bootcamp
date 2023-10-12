@@ -4,7 +4,7 @@ interface Personalidade {
   bio: string
 }
 
-let lista: Personalidade[] = [
+let listaDePersonalidades: Personalidade[] = [
   {
     id: 1,
     name: 'Ada Lovelace',
@@ -27,4 +27,4 @@ let lista: Personalidade[] = [
   }
 ]
 
-export { lista }
+export { listaDePersonalidades, Personalidade }
