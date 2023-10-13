@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.lista = void 0;
-let lista = [
+let listaDePersonalidades = [
     {
         id: 1,
         name: 'Ada Lovelace',
@@ -23,4 +20,4 @@ let lista = [
         bio: 'Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar.'
     }
 ];
-exports.lista = lista;
+export { listaDePersonalidades };

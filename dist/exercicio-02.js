@@ -1,30 +1,42 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
+import { obterBiografiaPorIdFuncional, obterNomePorIdFuncional, excluirItemPorIdFuncional, atualizarItemPorIdFuncional } from './funcional.js';
+document.addEventListener('DOMContentLoaded', () => {
+    const idInput = document.getElementById('idInput');
+    const getBioButton = document.getElementById('getBio');
+    const getNameButton = document.getElementById('getName');
+    const deleteItemButton = document.getElementById('deleteItem');
+    const updateItemButton = document.getElementById('updateItem');
+    const bioResult = document.getElementById('bioResult');
+    const nameResult = document.getElementById('nameResult');
+    const deleteResult = document.getElementById('deleteResult');
+    const updateResult = document.getElementById('updateResult');
+    const updateResults = (bio, name, deleted, updated) => {
+        bioResult.textContent = bio;
+        nameResult.textContent = name;
+        deleteResult.textContent = deleted;
+        updateResult.textContent = updated;
+    };
+    getBioButton.addEventListener('click', () => {
+        console.log('click');
+        const id = parseInt(idInput.value);
+        const bio = obterBiografiaPorIdFuncional(id);
+        updateResults(bio, '', '', '');
+    });
+    getNameButton.addEventListener('click', () => {
+        const id = parseInt(idInput.value);
+        const name = obterNomePorIdFuncional(id);
+        updateResults('', name, '', '');
+    });
+    deleteItemButton.addEventListener('click', () => {
+        const id = parseInt(idInput.value);
+        excluirItemPorIdFuncional(id);
+        updateResults('', '', 'Item excluído', '');
+    });
+    updateItemButton.addEventListener('click', () => {
+        var _a, _b;
+        const id = parseInt(idInput.value);
+        const novoNome = (_a = prompt('Novo nome:')) !== null && _a !== void 0 ? _a : '';
+        const novaBio = (_b = prompt('Nova bio:')) !== null && _b !== void 0 ? _b : '';
+        atualizarItemPorIdFuncional(id, novoNome, novaBio);
+        updateResults('', '', '', 'Item atualizado');
+    });
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const funcional = __importStar(require("./funcional"));
-console.log(funcional.getBioByIdFuncional(1));
-console.log(funcional.getNameByIdFuncional(1));
-console.log(funcional.deleteItemByIdFuncional(1));
-console.log(funcional.updateItemByIdFuncional(4, 'Leonardo da Vinci', 'Leonardo da Vinci foi um polímata italiano do Renascimento. Ele foi um pintor, escultor, arquiteto, cientista, matemático, engenheiro, inventor, anatomista, escritor, músico e muito mais. '));
