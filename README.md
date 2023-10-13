@@ -16,7 +16,7 @@ Neste repositório, você encontrará os resultados dos exercícios realizados d
 
 - **Criação de Página Web:** Desenvolvi uma página web interativa em TypeScript para visualizar os resultados dos exercícios.
 - **Formulário Interativo:** Implementei um formulário para contar vogais e funcionalidades de visualização, exclusão e edição de informações.
-- **Deploy Automático:** Configurei o GitHub Actions para realizar o deploy automático da página no GitHub Pages.
+- **Deploy Automático:** Configurei o deploy automático da página através do Netlify.
 
 **[Link para o Site](https://orion-bootcamp-charles-oliveira.netlify.app/)**
 
