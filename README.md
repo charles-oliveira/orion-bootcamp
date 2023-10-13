@@ -17,6 +17,9 @@ Neste repositório, você encontrará os resultados dos exercícios realizados d
 - **Criação de Página Web:** Desenvolvi uma página web interativa em TypeScript para visualizar os resultados dos exercícios.
 - **Formulário Interativo:** Implementei um formulário para contar vogais e funcionalidades de visualização, exclusão e edição de informações.
 - **Deploy Automático:** Configurei o GitHub Actions para realizar o deploy automático da página no GitHub Pages.
+
+**[Link para o Site](github.com/charles-oliveira/orion-bootcamp)**
+
 - **Organização e GitFlow:** Ganhei confiança na organização de pastas e na utilização eficaz do GitFlow para o controle de versões.
 
 Estes exercícios no Orion Bootcamp - Margaret Hamilton me proporcionaram um aprendizado valioso em programação, manipulação de texto, uso de expressões regulares e o uso eficaz dos paradigmas funcional e imperativo. Além disso, a prática em organização de pastas e GitFlow fortaleceu minhas habilidades de desenvolvimento e controle de versões.
