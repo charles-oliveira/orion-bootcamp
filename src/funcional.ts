@@ -1,6 +1,6 @@
 // importando os dados da listaDePersonalidades
-import { listaDePersonalidades } from './personalidades'
-import { Personalidade } from './personalidades'
+import { listaDePersonalidades } from './personalidades.js'
+import { Personalidade } from './personalidades.js'
 
 // a) Retorna a bio a partir de um id passado PR-FUN
 const obterBiografiaPorIdFuncional = (id: number): string => {
