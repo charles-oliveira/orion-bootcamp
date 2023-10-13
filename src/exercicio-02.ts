@@ -1,12 +1,12 @@
 import {
   obterBiografiaPorIdFuncional,
   obterNomePorIdFuncional
-} from './funcional.js' // Importar funções funcionais
+} from './funcional.js'
 
 import {
   excluirItemPorIdImperativo,
   atualizarItemPorIdImperativo
-} from './imperativo.js' // Importar funções imperativas
+} from './imperativo.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   const idInput = document.getElementById('idInput') as HTMLInputElement
