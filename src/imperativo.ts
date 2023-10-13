@@ -1,4 +1,4 @@
-import { listaDePersonalidades } from './personalidades'
+import { listaDePersonalidades } from './personalidades.js'
 
 // a) Retorna a bio do id passado
 function obterBiografiaPorIdImperativo(id: number): string {

@@ -1,4 +1,4 @@
-import { listaDePersonalidades } from './personalidades';
+import { listaDePersonalidades } from './personalidades.js';
 function obterBiografiaPorIdImperativo(id) {
     for (let i = 0; i < listaDePersonalidades.length; i++) {
         if (listaDePersonalidades[i]['id'] === id) {

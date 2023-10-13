@@ -1,4 +1,5 @@
-import { obterBiografiaPorIdFuncional, obterNomePorIdFuncional, excluirItemPorIdFuncional, atualizarItemPorIdFuncional } from './funcional.js';
+import { obterBiografiaPorIdFuncional, obterNomePorIdFuncional } from './funcional.js';
+import { excluirItemPorIdImperativo, atualizarItemPorIdImperativo } from './imperativo.js';
 document.addEventListener('DOMContentLoaded', () => {
     const idInput = document.getElementById('idInput');
     const getBioButton = document.getElementById('getBio');
@@ -28,15 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     deleteItemButton.addEventListener('click', () => {
         const id = parseInt(idInput.value);
-        excluirItemPorIdFuncional(id);
+        excluirItemPorIdImperativo(id);
         updateResults('', '', 'Item excluído', '');
     });
     updateItemButton.addEventListener('click', () => {
-        var _a, _b;
         const id = parseInt(idInput.value);
-        const novoNome = (_a = prompt('Novo nome:')) !== null && _a !== void 0 ? _a : '';
-        const novaBio = (_b = prompt('Nova bio:')) !== null && _b !== void 0 ? _b : '';
-        atualizarItemPorIdFuncional(id, novoNome, novaBio);
+        atualizarItemPorIdImperativo(id, 'Novo nome', 'Nova bio');
         updateResults('', '', '', 'Item atualizado');
     });
 });
