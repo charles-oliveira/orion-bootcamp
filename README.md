@@ -18,7 +18,7 @@ Neste repositório, você encontrará os resultados dos exercícios realizados d
 - **Formulário Interativo:** Implementei um formulário para contar vogais e funcionalidades de visualização, exclusão e edição de informações.
 - **Deploy Automático:** Configurei o GitHub Actions para realizar o deploy automático da página no GitHub Pages.
 
-**[Link para o Site](github.com/charles-oliveira/orion-bootcamp)**
+**[Link para o Site](https://orion-bootcamp-charles-oliveira.netlify.app/)**
 
 - **Organização e GitFlow:** Ganhei confiança na organização de pastas e na utilização eficaz do GitFlow para o controle de versões.
 

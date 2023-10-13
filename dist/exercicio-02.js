@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     updateItemButton.addEventListener('click', () => {
         const id = parseInt(idInput.value);
-        atualizarItemPorIdImperativo(id, 'Novo nome', 'Nova bio');
+        const name = prompt('Digite o novo nome');
+        const bio = prompt('Digite a nova bio');
+        atualizarItemPorIdImperativo(id, name || undefined, bio || undefined);
         updateResults('', '', '', 'Item atualizado');
     });
 });
