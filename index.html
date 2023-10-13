@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício 01 - Orion Bootcamp</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
 
     <script src="./dist/exercicio-01.js" defer></script>
     <script type="module" src="./dist/exercicio-02.js" defer></script>
   </head>
   <body>
+    <head>
+      <h1>Orion Bootcamp</h1>
+      <a
+        href="https://www.wikiwand.com/pt/Margaret_Hamilton_(cientista_da_computa%C3%A7%C3%A3o)"
+      >
+        <p class="subtitulo">Margaret Hamilton</p>
+      </a>
+    </head>
     <main>
       <section>
         <form class="exercicio-01">
@@ -25,9 +37,15 @@
           />
           <p class="display"></p>
         </form>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow Icon"
+          class="icon arrow"
+          onclick="location.href='./#exercicio-02'"
+        />
       </section>
 
-      <section class="exercicio-02">
+      <section class="exercicio-02" id="exercicio-02">
         <h2>Exercício 02</h2>
         <form class="form-flex">
           <div class="container-entrada">
@@ -35,7 +53,7 @@
             <input
               type="number"
               id="idInput"
-              placeholder="Digite um id entre 1-4"
+              placeholder="Digite um id entre 1 - 4"
             />
           </div>
           <div class="wrap-btns">
