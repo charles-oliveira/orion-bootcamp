@@ -1,3 +1,7 @@
+ <div align="center">
+<img src="https://newrizon.global/wp-content/themes/hello-theme-child-master/img/selo-bootcamp.svg" width="175px"> 
+</div>
+
 # Orion Bootcamp - Margaret Hamilton
 
 Neste repositório, você encontrará os resultados dos exercícios realizados durante o Orion Bootcamp - Margaret Hamilton. Os exercícios abordam o uso de expressões regulares (regex), os paradigmas funcional e imperativo, organização de pastas e GitFlow.
