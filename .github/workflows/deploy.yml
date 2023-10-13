@@ -1,22 +1,21 @@
-name: Deploy to Server
-
 on:
   push:
     branches:
       - feature/exercicio-03
+name: 🚀 Deploy website on push
 
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
-      - name: Deploy to Server
-        run: |
-          # Coloque os comandos de deploy aqui
-          # Por exemplo, usando SSH para fazer o deploy para um servidor
-          ssh user@your-server 'cd /path/to/your/app && git pull'
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_password }}
+          server-dir: /index.html
